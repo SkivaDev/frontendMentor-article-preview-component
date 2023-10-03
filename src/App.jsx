@@ -1,5 +1,6 @@
 import { useState } from "react";
 import avatar from "./assets/images/avatar-michelle.jpg";
+import share from "./assets/images/icon-share.svg"
 import drawers from "./assets/images/drawers.jpg";
 import "./App.css";
 
@@ -30,12 +31,14 @@ function App() {
                   <p className="text-grayish-blue">28 Jun 2020</p>
                 </div>
               </div>
-              <div>row</div>
+              <button type="button" className="flex items-center justify-center bg-light-grayish-blue hover:bg-desaturated-dark-blue hover:text-red-200 rounded-full w-[32px] h-[32px]">
+                <img src={share} alt="share-icon" className=""/>
+              </button>
             </div>
           </div>
           <img
             src={drawers}
-            alt="picture"W
+            alt="picture"
             width={540}
             height={446}
             className="w-[39%] object-cover object-left"
