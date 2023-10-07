@@ -43,7 +43,7 @@ function App() {
               <button type="button" onClick={handleOpen} className="flex items-center justify-center bg-light-grayish-blue hover:bg-desaturated-dark-blue hover:text-red-200 rounded-full w-[32px] h-[32px]">
                 <img src={share} alt="share-icon" className=""/>
               </button>
-              <div className={`dialog absolute w-fit right-[-26%] left-auto bottom-[125%] bg-dark-grayish-blue flex items-center gap-4 rounded-b-lg py-[1.4rem] px-9 text-white md:rounded-lg md:py-4 transition-visibility opacity-0  ${open ? 'visible opacity-100':''}`}>
+              <div className={`dialog absolute w-fit left-auto bottom-[125%] bg-dark-grayish-blue flex items-center gap-4 rounded-b-lg py-[1.4rem] px-9 text-white md:rounded-lg md:py-4 transition-visibility opacity-0  ${open ? 'visible opacity-100':''}`}>
                 <h2 className="text-grayish-blue uppercase tracking-[0.3125rem] text-[.8125rem]">Share</h2>
                 <ul className="flex items-center gap-4">
                   <li>

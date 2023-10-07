@@ -27,6 +27,7 @@
   .filter-gray {
     filter: invert(27%) sepia(7%) saturate(1380%) hue-rotate(190deg) brightness(91%) contrast(87%);
   }
+
   button:hover img {
     filter: brightness(100);
   }
@@ -36,6 +37,10 @@
     transition: transform var(--transition), visibility var(--transition), opacity var(--transition), background-color var(--transition);
   }
 
+  .dialog {
+    right: -26%;
+  }
+  
   .dialog::after {
     left: 50%;
     content: "";
@@ -47,4 +52,14 @@
     border-color: hsl(217, 19%, 35%) transparent transparent transparent;
     top: 100%;
   }
+
+  @media (width <= 54.0625rem) {
+    .dialog {
+      right: -10%;
+    }
+    .dialog::after {
+     left: 75%;
+    }
+  }
+
 }
