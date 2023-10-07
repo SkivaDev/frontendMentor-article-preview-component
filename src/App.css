@@ -19,8 +19,21 @@
 }
 
 @layer components {
+
+  .shadow-container {
+    box-shadow: 0rem 2.5rem 2.5rem -0.625rem rgba(201, 213, 225, 0.503415);
+  }
+
   .filter-gray {
     filter: invert(27%) sepia(7%) saturate(1380%) hue-rotate(190deg) brightness(91%) contrast(87%);
+  }
+  button:hover img {
+    filter: brightness(100);
+  }
+
+  .transition-visibility {
+    --transition: 200ms ease-in-out;
+    transition: transform var(--transition), visibility var(--transition), opacity var(--transition), background-color var(--transition);
   }
 
   .dialog::after {
