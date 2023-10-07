@@ -19,8 +19,8 @@ function App() {
   return (
     <>
       <main className="w-full h-screen flex justify-center items-center">
-        <div className="w-[45.625rem] h-[17.5rem] flex md:flex-row-reverse bg-white rounded-md shadow-container">
-          <div className="px-[2.5rem] py-[2rem]">
+        <div className="relative max-w-[25rem] h-auto md:max-w-none md:w-[45.625rem] md:h-[17.5rem] flex flex-col-reverse md:flex-row-reverse bg-white rounded-md shadow-container m-[.75rem]">
+          <div className="px-[2.5rem] py-4 md:py-[2rem]">
             <div className="">
               <h2 className="text-[1.25rem] font-bold text-dark-grayish-blue tracking-[0.0156rem]">
                 Shift the overall look and feel by adding these wonderful
@@ -32,7 +32,7 @@ function App() {
                 to help you make any room feel complete.
               </p>
             </div>
-            <div className="relative flex justify-between mt-[1.25rem]">
+            <div className="md:relative flex justify-between items-center mt-[1.25rem]">
               <div className="flex gap-4 items-center">
                 <img src={avatar} alt="avatar"  className="w-[2.5rem] h-[2.5rem] rounded-full"/>
                 <div className="text-[.8125rem]">
@@ -40,10 +40,10 @@ function App() {
                   <p className="text-grayish-blue">28 Jun 2020</p>
                 </div>
               </div>
-              <button type="button" onClick={handleOpen} className="flex items-center justify-center bg-light-grayish-blue hover:bg-desaturated-dark-blue hover:text-red-200 rounded-full w-[32px] h-[32px]">
+              <button type="button" onClick={handleOpen} className="flex items-center justify-center bg-light-grayish-blue hover:bg-desaturated-dark-blue hover:text-red-200 rounded-full w-[32px] h-[32px] z-10">
                 <img src={share} alt="share-icon" className=""/>
               </button>
-              <div className={`dialog absolute w-fit left-auto bottom-[125%] bg-dark-grayish-blue flex items-center gap-4 rounded-b-lg py-[1.4rem] px-9 text-white md:rounded-lg md:py-4 transition-visibility opacity-0  ${open ? 'visible opacity-100':''}`}>
+              <div className={`dialog absolute w-full bottom-0 left-0  md:w-fit md:left-auto md:bottom-[125%] bg-dark-grayish-blue flex items-center gap-4 rounded-b-lg py-[1.4rem] px-9 text-white md:rounded-lg md:py-4 transition-visibility opacity-0  ${open ? 'visible opacity-100':''}`}>
                 <h2 className="text-grayish-blue uppercase tracking-[0.3125rem] text-[.8125rem]">Share</h2>
                 <ul className="flex items-center gap-4">
                   <li>
@@ -70,7 +70,7 @@ function App() {
             alt="picture"
             width={540}
             height={446}
-            className="w-[39%] object-cover object-left rounded-l-md"
+            className="w-full md:w-[39%] object-cover object-left rounded-t-md md:rounded-t-none md:rounded-l-md"
           />
         </div>
       </main>

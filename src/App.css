@@ -38,28 +38,36 @@
   }
 
   .dialog {
-    right: -26%;
+    padding: 1.5rem 2rem;
   }
   
-  .dialog::after {
-    left: 50%;
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0.625rem;
-    border-color: hsl(217, 19%, 35%) transparent transparent transparent;
-    top: 100%;
-  }
 
-  @media (width <= 54.0625rem) {
+
+  @media (width >= 768px) {
     .dialog {
       right: -10%;
     }
     .dialog::after {
-     left: 75%;
+      left: 75%;
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0.625rem;
+      border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+      top: 100%;
     }
   }
+
+  @media (width >= 866px) {
+    .dialog {
+      right: -26%;
+    }
+    .dialog::after {
+      left: 50%; 
+    }
+  }
+
 
 }
